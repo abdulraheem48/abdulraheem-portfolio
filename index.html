@@ -3,89 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SHAIK ABDUL RAHEEM | Data Engineer Portfolio</title>
+  <title>Abdul Raheem - Data Engineer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="slideshow-container">
-
-    <div class="slide active">
+    <!-- Slide 1 -->
+    <div class="slide fade active">
       <h1>SHAIK ABDUL RAHEEM</h1>
-      <p>Email: <a href="mailto:abdulraheeem687@gmail.com">abdulraheeem687@gmail.com</a></p>
-      <p>📞 +91-6303726373</p>
-      <p>
-        <a href="https://www.linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/abdulraheem48" target="_blank">GitHub</a>
-      </p>
+      <p>📧 abdulraheeem687@gmail.com | 📞 +91-6303726373</p>
+      <p>🔗 <a href="https://linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/abdulraheem48" target="_blank">GitHub</a></p>
     </div>
 
-    <div class="slide">
-      <h2>Experience — Wipro (Data Engineer)</h2>
+    <!-- Slide 2 -->
+    <div class="slide fade">
+      <h2>Experience - Data Engineer @ Wipro</h2>
       <ul>
-        <li>Developed 40+ KPIs by extracting data from multiple sources.</li>
-        <li>Automated data refresh using Databricks job workflows.</li>
-        <li>Created ADF pipelines with dynamic parameters for seamless data processing.</li>
-        <li>Integrated SharePoint data to Microsoft Dataverse using Databricks.</li>
-        <li>Built Power BI dashboards for real-time insights.</li>
+        <li>Developed 40+ KPIs by extracting & transforming data from multiple sources.</li>
+        <li>Created Databricks workflow orchestration for daily refreshes.</li>
+        <li>Developed ADF data flows with dynamic parameters & Spark transformations.</li>
+        <li>Integrated SharePoint to Dataverse and built Power BI dashboards.</li>
       </ul>
     </div>
 
-    <div class="slide">
-      <h2>Experience — Wipro (Cloud Engineer)</h2>
+    <!-- Slide 3 -->
+    <div class="slide fade">
+      <h2>Experience - Cloud Engineer @ Wipro</h2>
       <ul>
-        <li>Built and managed AWS Data Lakes with CI/CD automation.</li>
-        <li>Optimized ETL/ELT pipelines for performance and reliability.</li>
-        <li>Created Splunk dashboards for monitoring and analysis.</li>
-        <li>Implemented S3, IAM, and CloudFormation-based automation.</li>
-        <li>Mentored new team members to strengthen cloud operations.</li>
+        <li>Created AWS data lakes and automated pipelines via CloudFormation.</li>
+        <li>Optimized ETL/ELT jobs, monitored pipelines using Splunk dashboards.</li>
+        <li>Led operations improving data efficiency by 120%.</li>
       </ul>
     </div>
 
-    <div class="slide">
-      <h2>Experience — Wipro (Big Data Engineer)</h2>
+    <!-- Slide 4 -->
+    <div class="slide fade">
+      <h2>Experience - Big Data Engineer @ Wipro</h2>
       <ul>
-        <li>Optimized Hadoop file system usage and monitored cluster performance.</li>
-        <li>Analyzed Spark and Splunk logs to resolve job failures quickly.</li>
-        <li>Streamlined maintenance operations ensuring uptime during patching.</li>
+        <li>Optimized Hadoop cluster disk space usage & troubleshooting Spark logs.</li>
+        <li>Reduced job failure downtime through proactive monitoring.</li>
       </ul>
     </div>
 
-    <div class="slide">
-      <h2>Project — Vehicle Rental System</h2>
-      <p>
-        Designed and built an OOP-based vehicle rental application with modules for customers and staff.
-        Included booking management, admin dashboards, and automated invoice generation.
-      </p>
+    <!-- Slide 5 -->
+    <div class="slide fade">
+      <h2>Projects</h2>
+      <p><b>Vehicle Rental System</b> — built with OOP concepts, supporting bookings, vehicle availability, and invoices.</p>
     </div>
 
-    <div class="slide">
-      <h2>Certifications</h2>
+    <!-- Slide 6 -->
+    <div class="slide fade">
+      <h2>Certificates & Skills</h2>
       <ul>
-        <li>Databricks Certified Associate Developer for Apache Spark 3.0</li>
-        <li>AWS Certified Cloud Practitioner</li>
-        <li>AWS Certified Solutions Architect – Associate</li>
-        <li>SnowPro Core</li>
+        <li>Databricks Certified | AWS Architect | SnowPro Core</li>
+        <li>Languages: Python, SQL</li>
+        <li>Tools: Airflow, Databricks, Power BI, Snowflake</li>
+        <li>Platforms: Azure, AWS, GitHub Actions</li>
       </ul>
     </div>
 
-    <div class="slide">
-      <h2>Technical Skills</h2>
-      <ul>
-        <li><b>Languages:</b> Python, SQL</li>
-        <li><b>Tools:</b> Airflow, Hadoop, Snowflake, Pandas, Matplotlib, Apache Spark, Grafana</li>
-        <li><b>Platforms:</b> Azure, AWS, GitHub Actions</li>
-        <li><b>Visualization:</b> Power BI, Jupyter</li>
-      </ul>
-    </div>
-
-    <div class="slide">
+    <!-- Slide 7 -->
+    <div class="slide fade">
       <h2>Education</h2>
-      <p><b>B.Tech in Electrical Engineering</b><br>Devineni Venkata Ramana and Dr. Hima Sekhar MIC College of Technology<br>CGPA: 7.62</p>
-      <p><b>Diploma in Electrical Engineering</b><br>MIC College of Technology<br>CGPA: 7.52</p>
+      <p><b>B.Tech</b> - Electrical Engineering (CGPA 7.62)</p>
+      <p><b>Diploma</b> - Electrical Engineering (CGPA 7.52)</p>
     </div>
 
-    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
-    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="changeSlide(-1)">❮</a>
+    <a class="next" onclick="changeSlide(1)">❯</a>
   </div>
 
   <script src="script.js"></script>
