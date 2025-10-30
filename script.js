@@ -12,15 +12,6 @@ function moveSlide(n) {
   showSlide(slideIndex);
 }
 
-// Auto-slide every 5 seconds
-let autoSlide = setInterval(() => moveSlide(1), 5000);
-
-// Pause on hover
-const container = document.querySelector('.slideshow-container');
-container.addEventListener('mouseenter', () => clearInterval(autoSlide));
-container.addEventListener('mouseleave', () => {
-  autoSlide = setInterval(() => moveSlide(1), 5000);
-});
-
-// Show first slide
+// Show first slide by default
 showSlide(slideIndex);
+
