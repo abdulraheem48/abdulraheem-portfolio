@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #0d1117;
+  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
   color: #e6edf3;
   overflow: hidden;
+  position: relative;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(88,166,255,0.2), transparent 70%);
+  pointer-events: none;
 }
 
 .container {
   display: flex;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 1s ease-in-out;
   height: 100vh;
 }
 
@@ -17,16 +30,28 @@ body {
   padding: 60px;
   box-sizing: border-box;
   text-align: center;
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 h1 {
   color: #58a6ff;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 h2 {
   color: #79c0ff;
-  margin-top: 0;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #30363d;
+  display: inline-block;
+  padding-bottom: 5px;
 }
 
 a {
@@ -42,10 +67,32 @@ ul {
   list-style: square;
   text-align: left;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .subtitle {
   font-size: 1.1rem;
   color: #8b949e;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #30363d;
+  transition: 0.4s;
+}
+
+.dot.active {
+  background: #58a6ff;
+  transform: scale(1.2);
 }
