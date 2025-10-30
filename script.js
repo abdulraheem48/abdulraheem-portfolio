@@ -1,31 +1,26 @@
-let index = 0;
-const slides = document.querySelectorAll(".slide");
-const dotsContainer = document.querySelector(".dots");
+let slideIndex = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
 
-// Create navigation dots
-slides.forEach((_, i) => {
-  const dot = document.createElement("div");
-  dot.classList.add("dot");
-  if (i === 0) dot.classList.add("active");
-  dot.addEventListener("click", () => goToSlide(i));
-  dotsContainer.appendChild(dot);
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+  slides[index].classList.add('active');
+}
+
+function moveSlide(n) {
+  slideIndex = (slideIndex + n + totalSlides) % totalSlides;
+  showSlide(slideIndex);
+}
+
+// Auto-slide every 5 seconds
+let autoSlide = setInterval(() => moveSlide(1), 5000);
+
+// Pause on hover
+const container = document.querySelector('.slideshow-container');
+container.addEventListener('mouseenter', () => clearInterval(autoSlide));
+container.addEventListener('mouseleave', () => {
+  autoSlide = setInterval(() => moveSlide(1), 5000);
 });
-const dots = document.querySelectorAll(".dot");
 
-function showSlide() {
-  slides.forEach(s => s.classList.remove("active"));
-  dots.forEach(d => d.classList.remove("active"));
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
-  document.querySelector(".container").style.transform = `translateX(-${index * 100}%)`;
-}
-
-function goToSlide(i) {
-  index = i;
-  showSlide();
-}
-
-setInterval(() => {
-  index = (index + 1) % slides.length;
-  showSlide();
-}, 6000);
+// Show first slide
+showSlide(slideIndex);

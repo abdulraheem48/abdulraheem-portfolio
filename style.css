@@ -1,57 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
-
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  font-family: 'Poppins', sans-serif;
+  background-color: #0d1117;
   color: #e6edf3;
-  overflow: hidden;
-  position: relative;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at top left, rgba(88,166,255,0.2), transparent 70%);
-  pointer-events: none;
-}
-
-.container {
   display: flex;
-  transition: transform 1s ease-in-out;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
-}
-
-.slide {
-  min-width: 100%;
-  padding: 60px;
-  box-sizing: border-box;
-  text-align: center;
-  opacity: 0;
-  transform: scale(0.96);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-h1 {
-  color: #58a6ff;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-h2 {
-  color: #79c0ff;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #30363d;
-  display: inline-block;
-  padding-bottom: 5px;
 }
 
 a {
@@ -63,36 +18,59 @@ a:hover {
   text-decoration: underline;
 }
 
-ul {
-  list-style: square;
+.slideshow-container {
+  position: relative;
+  width: 85%;
+  max-width: 900px;
+  padding: 30px;
+  background: #161b22;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
   text-align: left;
-  max-width: 700px;
-  margin: 20px auto;
+  animation: fade 0.8s ease-in-out;
 }
 
-.subtitle {
-  font-size: 1.1rem;
-  color: #8b949e;
+.slide.active {
+  display: block;
 }
 
-.dots {
+h1, h2 {
+  color: #ffffff;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+.prev, .next {
+  cursor: pointer;
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 10px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
+  top: 50%;
+  padding: 10px 18px;
+  border: none;
+  background-color: #30363d;
+  color: #e6edf3;
+  font-size: 22px;
   border-radius: 50%;
-  background: #30363d;
-  transition: 0.4s;
+  transform: translateY(-50%);
+  transition: background 0.3s, transform 0.2s;
 }
 
-.dot.active {
-  background: #58a6ff;
-  transform: scale(1.2);
+.prev:hover, .next:hover {
+  background-color: #1f6feb;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+@keyframes fade {
+  from { opacity: 0.4; }
+  to { opacity: 1; }
 }
