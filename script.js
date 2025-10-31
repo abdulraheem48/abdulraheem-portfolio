@@ -1,5 +1,9 @@
-// Typing Effect
-const text = ["Data Engineer", "Cloud Engineer", "Big Data Engineer"];
+const text = [
+  "Data Engineer",
+  "Azure Developer",
+  "PySpark Specialist",
+  "SQL Expert"
+];
 let index = 0;
 let charIndex = 0;
 const typingElement = document.querySelector(".typing");
@@ -21,28 +25,8 @@ function eraseEffect() {
     setTimeout(eraseEffect, 50);
   } else {
     index = (index + 1) % text.length;
-    setTimeout(typeEffect, 300);
+    setTimeout(typeEffect, 200);
   }
 }
 
 document.addEventListener("DOMContentLoaded", typeEffect);
-
-// Smooth Scroll Active Link
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll("nav a");
-
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 100;
-    if (scrollY >= sectionTop) {
-      current = section.getAttribute("id");
-    }
-  });
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active");
-    }
-  });
-});
