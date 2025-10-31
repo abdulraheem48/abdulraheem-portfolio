@@ -1,14 +1,32 @@
-const tabs = document.querySelectorAll(".tab-btn");
-const sections = document.querySelectorAll(".tab-content");
+const text = [
+  "Data Engineer",
+  "Azure Developer",
+  "PySpark Specialist",
+  "SQL Expert"
+];
+let index = 0;
+let charIndex = 0;
+const typingElement = document.querySelector(".typing");
 
-tabs.forEach(btn => {
-  btn.addEventListener("click", () => {
-    tabs.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    const target = btn.dataset.target;
+function typeEffect() {
+  if (charIndex < text[index].length) {
+    typingElement.textContent += text[index].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 100);
+  } else {
+    setTimeout(eraseEffect, 1500);
+  }
+}
 
-    sections.forEach(sec => {
-      sec.classList.toggle("active", sec.id === target);
-    });
-  });
-});
+function eraseEffect() {
+  if (charIndex > 0) {
+    typingElement.textContent = text[index].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseEffect, 50);
+  } else {
+    index = (index + 1) % text.length;
+    setTimeout(typeEffect, 200);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", typeEffect);
