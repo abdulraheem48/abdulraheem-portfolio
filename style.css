@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
 body {
   background: linear-gradient(to right, #f9f3ec, #f4e6d6);
@@ -22,7 +17,7 @@ header {
   padding: 20px 100px;
   position: fixed;
   top: 0;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.8);
   backdrop-filter: blur(10px);
   z-index: 1000;
 }
@@ -49,21 +44,21 @@ nav a:hover, nav a.active { color: #c7a153; }
   cursor: pointer;
 }
 
-/* Sections as Tabs */
+/* Sections */
 .section {
   display: none;
-  opacity: 0;
-  transform: translateY(15px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
   padding: 100px;
-  max-width: 1000px;
-  margin: 120px auto;
+  min-height: 100vh;
+  transition: opacity 0.5s ease;
+}
+.section.active-section {
+  display: block;
+  animation: fadeIn 0.5s ease-in;
 }
 
-.active-section {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Hero */
@@ -71,67 +66,53 @@ nav a:hover, nav a.active { color: #c7a153; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
+  padding-top: 100px;
 }
 
-.hero-img .img-border {
-  width: 340px;
-  height: 340px;
+.img-border {
+  width: 300px;
+  height: 300px;
   border: 6px solid #c7a153;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
-
-.hero-img img {
-  width: 300px;
-  height: 300px;
+.img-border img {
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.hero-text h2 { font-size: 2.5rem; font-weight: 700; color: #3a2f1d; }
 .hero-text h2 span { color: #c7a153; }
-.hero-text h3 { font-size: 1.3rem; color: #3a2f1d; margin: 10px 0; }
-.typing { color: #c7a153; font-weight: bold; }
-.hero-text p { margin: 15px 0 30px; line-height: 1.7; }
+.hero-text h3 .typing { color: #c7a153; font-weight: 600; }
 
 .social-icons a {
   color: #3a2f1d;
   font-size: 1.5rem;
   margin-right: 15px;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
-.social-icons a:hover {
-  color: #c7a153;
-  text-shadow: 0 0 10px #c7a153;
-}
+.social-icons a:hover { color: #c7a153; transform: scale(1.2); }
 
-/* CV Button */
 .download-btn {
-  background: #836028;
-  color: white;
-  padding: 12px 30px;
-  border-radius: 25px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #c7a153;
+  color: #fff;
   text-decoration: none;
+  border-radius: 25px;
   font-weight: 600;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-  position: relative;
-  overflow: hidden;
+  box-shadow: 0 0 10px #c7a153;
+  transition: all 0.3s ease;
 }
-.download-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  height: 100%;
-  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
-  transition: left 0.8s;
+.download-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #c7a153, 0 0 30px #c7a153;
 }
-.download-btn:hover::before { left: 120%; }
-.download-btn:hover { background: #a37b45; transform: scale(1.05); }
 
 /* Footer */
 footer {

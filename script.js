@@ -1,41 +1,44 @@
 // Typing effect
-const text = ["Data Engineer", "Cloud Engineer", "Big Data Engineer"];
-let index = 0, charIndex = 0;
+const typingTexts = ["Data Engineer", "Cloud Engineer", "Big Data Engineer"];
+let i = 0, j = 0;
 const typingElement = document.querySelector(".typing");
 
 function typeEffect() {
-  if (charIndex < text[index].length) {
-    typingElement.textContent += text[index].charAt(charIndex++);
+  if (!typingElement) return;
+  if (j < typingTexts[i].length) {
+    typingElement.textContent += typingTexts[i].charAt(j++);
     setTimeout(typeEffect, 100);
-  } else setTimeout(eraseEffect, 1500);
+  } else {
+    setTimeout(eraseEffect, 1500);
+  }
 }
-
 function eraseEffect() {
-  if (charIndex > 0) {
-    typingElement.textContent = text[index].substring(0, --charIndex);
+  if (j > 0) {
+    typingElement.textContent = typingTexts[i].substring(0, --j);
     setTimeout(eraseEffect, 50);
   } else {
-    index = (index + 1) % text.length;
+    i = (i + 1) % typingTexts.length;
     setTimeout(typeEffect, 200);
   }
 }
 document.addEventListener("DOMContentLoaded", typeEffect);
 
-// Tab Navigation
-const links = document.querySelectorAll(".nav-link, .contact-btn");
+// Show only one section at a time
+const navLinks = document.querySelectorAll("nav a, .contact-btn");
 const sections = document.querySelectorAll(".section");
 
-links.forEach(link => {
+function showSection(id) {
+  sections.forEach(sec => sec.classList.remove("active-section"));
+  document.getElementById(id).classList.add("active-section");
+  navLinks.forEach(link => link.classList.remove("active"));
+  document.querySelector(`[data-target="${id}"]`)?.classList.add("active");
+}
+
+navLinks.forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
-    const target = link.dataset.target;
-
-    links.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-
-    sections.forEach(section => section.classList.remove("active-section"));
-    document.getElementById(target).classList.add("active-section");
-
+    const id = link.getAttribute("data-target");
+    showSection(id);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
