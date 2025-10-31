@@ -1,102 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shaik Abdul Raheem | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdul Raheem Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo"><span>Abdul</span>Raheem</div>
+  <header class="navbar">
+    <h1 class="logo"><span>Abdul</span>Raheem</h1>
     <nav>
       <ul>
-        <li><a href="#" class="active" data-tab="home">Home</a></li>
-        <li><a href="#" data-tab="experience">Experience</a></li>
-        <li><a href="#" data-tab="projects">Projects</a></li>
-        <li><a href="#" data-tab="skills">Skills</a></li>
-        <li><a href="#" data-tab="education">Education</a></li>
+        <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-target="experience">Experience</a></li>
+        <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
+        <li><a href="#" class="nav-link" data-target="skills">Skills</a></li>
+        <li><a href="#" class="nav-link" data-target="education">Education</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <!-- HOME -->
-    <section id="home" class="tab-content active">
-      <div class="intro">
-        <img src="data/profile.jpg" alt="Profile" class="profile-img">
-        <div class="intro-text">
-          <h1>Hey I'm <span>Abdul Raheem</span></h1>
-          <h2>I'm a <span class="typing"></span></h2>
+    <!-- Home -->
+    <section id="home" class="tab-section active">
+      <div class="home-container">
+        <div class="profile-pic">
+          <img src="data/profile.jpg" alt="Shaik Abdul Raheem" />
+        </div>
+        <div class="intro">
+          <h2>Hey I'm <span>Abdul Raheem</span></h2>
+          <h3>I'm a <span class="typing"></span></h3>
           <p>
-            Passionate and detail-oriented Data Engineer experienced in Azure, AWS, Databricks, and Snowflake.
-            Skilled in building and optimizing scalable pipelines for enterprise clients.
+            Passionate and detail-oriented engineer with hands-on experience in
+            Azure, Databricks, ADF, PySpark, and SQL. Focused on automation and scalable data solutions.
           </p>
-          <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" class="btn" download>Download CV</a>
+          <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" target="_blank" class="btn">Download CV</a>
         </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="tab-content">
+    <!-- Experience -->
+    <section id="experience" class="tab-section">
       <h2>Experience</h2>
-      <div class="exp">
+      <div class="content-scroll">
         <h3>Wipro Ltd | Client: Optum (UnitedHealth Group)</h3>
-        <p><strong>Mar 2024 – Present</strong> | Data Engineer</p>
+        <p><strong>Data Engineer | Mar 2024 – Present</strong></p>
         <ul>
-          <li>Ensured seamless execution by identifying and resolving failures, reducing L2 dependency.</li>
-          <li>Maintained SLA compliance for file deliveries, improving service reliability.</li>
-          <li>Collaborated during production support ensuring business continuity.</li>
+          <li>Ensured seamless execution of client processes by proactively identifying and resolving failures.</li>
+          <li>Maintained SLA compliance for response file deliveries, improving service reliability.</li>
+          <li>Collaborated with teams for quick issue resolution and process optimization.</li>
         </ul>
+
         <h3>Wipro Ltd | Client: Bharat Petroleum</h3>
-        <p><strong>Jun 2024 – Feb 2025</strong> | Data Engineer</p>
+        <p><strong>Data Engineer | Jun 2024 – Feb 2025</strong></p>
         <ul>
-          <li>Developed 40+ KPIs using SQL & PySpark meeting business requirements.</li>
-          <li>Built ADF pipelines with dynamic parameters and automated workflows.</li>
-          <li>Integrated SharePoint data into Dataverse and Power BI dashboards.</li>
+          <li>Developed 40+ KPIs using SQL and PySpark.</li>
+          <li>Created automated workflows in Databricks & Azure Data Factory.</li>
+          <li>Built Power BI dashboards and optimized pipeline performance.</li>
         </ul>
+
         <h3>Wipro Ltd | Client: Apple</h3>
-        <p><strong>Nov 2022 – Apr 2024</strong> | Cloud Engineer</p>
+        <p><strong>Cloud Engineer | Nov 2022 – Apr 2024</strong></p>
         <ul>
-          <li>Led cloud operations improving efficiency by 120% through automation.</li>
-          <li>Developed AWS Data Lakes and CI/CD pipelines for reliable deployments.</li>
-          <li>Created Splunk dashboards for monitoring and analytics.</li>
+          <li>Developed and managed AWS Cloud Data Lakes.</li>
+          <li>Automated CI/CD pipelines using AWS CLI & CloudFormation.</li>
+          <li>Built Splunk dashboards for real-time operational insights.</li>
         </ul>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="tab-content">
+    <!-- Projects -->
+    <section id="projects" class="tab-section">
       <h2>Projects</h2>
       <h3>Vehicle Rental System (Aug 2024)</h3>
       <ul>
-        <li>Developed full system for vehicle rental with OOP-based modules.</li>
-        <li>Implemented booking, vehicle management, and admin reporting features.</li>
-        <li>Automated invoice generation with error handling and validation.</li>
+        <li>Designed and implemented full vehicle rental system with OOP modules.</li>
+        <li>Built features for booking, admin management, and invoice automation.</li>
       </ul>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="tab-content">
+    <!-- Skills -->
+    <section id="skills" class="tab-section">
       <h2>Skills & Certifications</h2>
       <p><strong>Languages:</strong> Python, SQL</p>
-      <p><strong>Tools:</strong> Airflow, Hadoop, Snowflake, Pandas, Matplotlib, Spark, Grafana, Jupyter, ADF, Databricks, Power BI</p>
-      <p><strong>Platforms:</strong> AWS, Azure, GitHub Actions</p>
-      <h3>Certificates</h3>
+      <p><strong>Tools:</strong> Databricks, ADF, Snowflake, Airflow, Spark, Power BI</p>
+      <p><strong>Cloud:</strong> Azure, AWS</p>
+      <p><strong>Certificates:</strong></p>
       <ul>
-        <li>Databricks Certified Associate Developer for Apache Spark 3.0</li>
+        <li>Databricks Certified Associate Developer – Apache Spark 3.0</li>
         <li>AWS Certified Cloud Practitioner</li>
-        <li>AWS Certified Solutions Architect – Associate</li>
         <li>SnowPro Core</li>
       </ul>
     </section>
 
-    <!-- EDUCATION -->
-    <section id="education" class="tab-content">
+    <!-- Education -->
+    <section id="education" class="tab-section">
       <h2>Education</h2>
       <ul>
         <li><strong>B.Tech in Electrical Engineering</strong> – MIC College of Technology (CGPA: 7.62)</li>
-        <li><strong>Diploma - Electrical Engineering</strong> – MIC College of Technology (CGPA: 7.52)</li>
+        <li><strong>Diploma in Electrical Engineering</strong> – MIC College of Technology (CGPA: 7.52)</li>
       </ul>
     </section>
   </main>
