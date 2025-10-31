@@ -1,27 +1,28 @@
 body {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #fffaf0;
+  font-family: "Poppins", sans-serif;
+  background: #fff;
   color: #333;
-  transition: background 0.5s;
+  overflow: hidden;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 60px;
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 15px 50px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: fixed;
+  top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .logo {
   font-weight: 700;
-  font-size: 1.2rem;
   color: #d4af37;
+  font-size: 1.1rem;
 }
 
 .nav-btn {
@@ -29,37 +30,57 @@ body {
   border: none;
   font-size: 1rem;
   margin: 0 10px;
-  color: #333;
   cursor: pointer;
   transition: color 0.3s;
 }
 
-.nav-btn.active,
-.nav-btn:hover {
+.nav-btn:hover,
+.nav-btn.active {
   color: #d4af37;
 }
 
 main {
-  padding-top: 100px;
-  text-align: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .section {
   display: none;
   opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-  max-width: 900px;
-  margin: 0 auto;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateX(50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section.active {
-  display: block;
+  display: flex;
   opacity: 1;
+  transform: translateX(0);
+}
+
+.content {
+  width: 80%;
+  max-width: 800px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .profile-pic {
-  width: 180px;
-  height: 180px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   border: 3px solid #d4af37;
   margin-bottom: 20px;
@@ -70,32 +91,37 @@ main {
 }
 
 .btn {
-  background-color: #d4af37;
+  background: #d4af37;
   color: white;
-  padding: 10px 20px;
-  text-decoration: none;
+  padding: 10px 25px;
   border-radius: 8px;
-  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background 0.3s;
 }
 
 .btn:hover {
-  background-color: #b7950b;
+  background: #b7950b;
 }
 
 .exp-card {
-  background: #fff;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   text-align: left;
+  margin-top: 20px;
+  line-height: 1.6;
 }
 
-.exp-card h3 {
+h2 {
   color: #d4af37;
+  margin-bottom: 20px;
 }
 
-.date {
-  font-size: 0.9rem;
-  color: gray;
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
