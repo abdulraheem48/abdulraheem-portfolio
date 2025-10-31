@@ -1,21 +1,43 @@
-// Typing Animation
-const roles = ["Data Engineer", "Azure Developer", "Big Data Engineer"];
-let roleIndex = 0;
-let charIndex = 0;
-let currentRole = "";
-let currentChar = "";
+// Typing effect
+const texts = ["Big Data Engineer", "Azure Data Engineer", "Cloud Engineer"];
+let index = 0, charIndex = 0;
+const typingSpan = document.querySelector(".typing");
 
-(function type() {
-  if (roleIndex === roles.length) roleIndex = 0;
-  currentRole = roles[roleIndex];
-  currentChar = currentRole.slice(0, ++charIndex);
-  document.querySelector(".typing").textContent = currentChar;
-
-  if (currentChar.length === currentRole.length) {
-    roleIndex++;
-    charIndex = 0;
-    setTimeout(type, 1200);
+function typeEffect() {
+  if (charIndex < texts[index].length) {
+    typingSpan.textContent += texts[index].charAt(charIndex);
+    charIndex++;
+    setTimeout(typeEffect, 100);
   } else {
-    setTimeout(type, 120);
+    setTimeout(eraseEffect, 2000);
   }
-})();
+}
+
+function eraseEffect() {
+  if (charIndex > 0) {
+    typingSpan.textContent = texts[index].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(eraseEffect, 50);
+  } else {
+    index = (index + 1) % texts.length;
+    setTimeout(typeEffect, 500);
+  }
+}
+typeEffect();
+
+// Navbar active highlight
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    if (scrollY >= sectionTop) current = section.getAttribute("id");
+  });
+
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    if (a.getAttribute("href") === `#${current}`) a.classList.add("active");
+  });
+});
