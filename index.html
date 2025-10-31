@@ -1,94 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shaik Abdul Raheem | Data Engineer</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6e52f2216e.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaik Abdul Raheem | Data Engineer Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <header>
-    <div class="logo">Raheem</div>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo">Abdul Raheem</div>
     <nav>
-      <ul>
-        <li><a href="#" data-section="home" class="active">Home</a></li>
-        <li><a href="#" data-section="about">About</a></li>
-        <li><a href="#" data-section="experience">Experience</a></li>
-        <li><a href="#" data-section="contact">Contact</a></li>
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
+  <!-- Sections -->
   <main>
     <!-- HOME -->
-    <section id="home" class="active">
+    <section id="home" class="section active">
       <div class="hero">
-        <div class="hero-image">
-          <div class="image-border">
-            <img src="data/profile.jpg" alt="Shaik Abdul Raheem">
-          </div>
-        </div>
-        <div class="hero-text">
-          <h1>Hey I'm <span>Shaik Abdul Raheem</span></h1>
-          <h2>I'm a <span class="highlight">Data Engineer</span></h2>
-          <p>Data Engineer at Wipro — expertise in Azure, Databricks, ADF, PySpark and SQL. I build scalable data pipelines, automate workflows, and create dashboards for business insights.</p>
-
-          <div class="social-icons">
-            <a href="https://github.com/abdulraheem48" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:abdulraheeem687@gmail.com"><i class="fas fa-envelope"></i></a>
-          </div>
-
-          <a href="Abdul_Raheem_Wipro_Data_Engineer.pdf" class="btn" download>Download CV</a>
+        <img src="data/profile.jpg" alt="Profile Photo" class="profile-img" />
+        <h1>Hi, I'm <span>Shaik Abdul Raheem</span></h1>
+        <p>Data Engineer @ Wipro | Azure | Databricks | Power BI | AWS</p>
+        <div class="buttons">
+          <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" target="_blank" class="btn">📄 View Resume</a>
+          <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" download class="btn secondary">⬇️ Download</a>
         </div>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section id="about">
+    <section id="about" class="section">
       <h2>About Me</h2>
-      <p>I'm <strong>Shaik Abdul Raheem</strong>, a Data Engineer passionate about building automated, scalable, and cloud-native data systems. With hands-on experience in Azure, Databricks, and PySpark, I enjoy solving complex data challenges and delivering real-time business insights.</p>
+      <p>
+        I’m a passionate <strong>Data Engineer</strong> with experience designing, developing,
+        and maintaining scalable data pipelines in <strong>Azure</strong> and <strong>AWS</strong> environments.
+        I focus on transforming raw data into actionable insights using tools like
+        <strong>Databricks</strong>, <strong>SQL</strong>, and <strong>Power BI</strong>.
+        My goal is to create efficient, automated data systems that empower business decisions.
+      </p>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience">
+    <section id="experience" class="section">
       <h2>Experience</h2>
 
       <div class="exp-card">
         <h3>Wipro Ltd | Client: Optum (UnitedHealth Group)</h3>
-        <span>Mar 2024 – Present</span>
-        <p><strong>Data Engineer</strong></p>
+        <span class="date">Mar 2024 – Present</span>
+        <p class="role">Data Engineer</p>
         <ul>
-          <li>Ensured seamless client process execution and improved operational efficiency.</li>
-          <li>Maintained SLA compliance and automated workflows using Databricks.</li>
-          <li>Collaborated across teams for rapid issue resolution and data insights.</li>
+          <li>Ensured seamless execution of client processes by proactively identifying and resolving failures, reducing L2 dependency.</li>
+          <li>Maintained SLA compliance for response file deliveries, improving service reliability and client satisfaction.</li>
+          <li>Provided timely assistance to team members and coordinated updates from cross-functional teams.</li>
+          <li>Collaborated during production support scenarios ensuring business continuity.</li>
+          <li>Explored product repositories to understand architecture and data flow.</li>
+          <li>Initiated automation ideas to streamline manual workflows.</li>
         </ul>
       </div>
 
       <div class="exp-card">
         <h3>Wipro Ltd | Client: Bharat Petroleum</h3>
-        <span>Jun 2023 – Feb 2024</span>
-        <p><strong>Data Engineer</strong></p>
+        <span class="date">Jun 2024 – Feb 2025</span>
+        <p class="role">Data Engineer</p>
         <ul>
-          <li>Developed 40+ KPIs using Azure Data Factory, Databricks, and Power BI.</li>
-          <li>Integrated data sources and designed real-time pipelines with PySpark.</li>
-          <li>Automated reporting and optimized ADF pipeline performance.</li>
+          <li>Developed 40+ KPIs using SQL and PySpark to meet business requirements.</li>
+          <li>Maintained data refresh workflows in Azure Databricks.</li>
+          <li>Built Azure Data Factory pipelines with dynamic parameters for automation.</li>
+          <li>Integrated SharePoint data into Microsoft Dataverse and Power BI dashboards.</li>
+          <li>Collaborated across teams for pipeline optimization and reliability.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h3>Wipro Ltd | Client: Apple</h3>
+        <span class="date">Nov 2022 – Apr 2024</span>
+        <p class="role">Cloud Engineer</p>
+        <ul>
+          <li>Led cloud operations, improving data efficiency by 120% through automation.</li>
+          <li>Developed and managed AWS Cloud Data Lakes for large-scale data integration.</li>
+          <li>Automated CI/CD pipelines and resolved AWS access and deployment issues.</li>
+          <li>Built Splunk dashboards for log analysis and operational insights.</li>
         </ul>
       </div>
     </section>
 
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div><strong>Languages:</strong> Python, SQL</div>
+        <div><strong>Cloud:</strong> Azure, AWS</div>
+        <div><strong>Tools:</strong> Databricks, Power BI, Snowflake, Airflow</div>
+        <div><strong>Big Data:</strong> PySpark, Hadoop, ADF</div>
+        <div><strong>Others:</strong> Git, CI/CD, Grafana, Jupyter</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="project-card">
+        <h3>Vehicle Rental System</h3>
+        <p>Developed a full-featured rental platform with user & admin dashboards, booking, billing, and reporting modules using Python and OOP principles.</p>
+      </div>
+    </section>
+
     <!-- CONTACT -->
-    <section id="contact">
+    <section id="contact" class="section">
       <h2>Contact</h2>
-      <p>Email: <a href="mailto:abdulraheeem687@gmail.com">abdulraheeem687@gmail.com</a></p>
-      <p>Phone: +91 6303726373</p>
+      <p>📧 abdulraheeem687@gmail.com</p>
+      <p>📞 +91-6303726373</p>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank">LinkedIn</a>
+        <a href="https://github.com/abdulraheem48" target="_blank">GitHub</a>
+      </div>
     </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

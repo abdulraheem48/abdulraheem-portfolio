@@ -1,17 +1,19 @@
-const navLinks = document.querySelectorAll("nav a");
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll('.section');
+const navLinks = document.querySelectorAll('.nav-link');
+const clickSound = new Audio('click.mp3');
+
+function showSection(id) {
+  sections.forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
 
 navLinks.forEach(link => {
-  link.addEventListener("click", e => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    navLinks.forEach(l => l.classList.remove("active"));
-    link.classList.add("active");
-
-    const target = link.getAttribute("data-section");
-
-    sections.forEach(sec => {
-      sec.classList.remove("active");
-      if (sec.id === target) sec.classList.add("active");
-    });
+    clickSound.currentTime = 0;
+    clickSound.play();
+    navLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    showSection(link.dataset.section);
   });
 });
