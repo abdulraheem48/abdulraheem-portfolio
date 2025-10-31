@@ -1,9 +1,4 @@
-const text = [
-  "Data Engineer",
-  "Azure Developer",
-  "PySpark Specialist",
-  "SQL Expert"
-];
+const text = ["Data Engineer", "Cloud Engineer", "Big Data Engineer"];
 let index = 0;
 let charIndex = 0;
 const typingElement = document.querySelector(".typing");
