@@ -6,58 +6,55 @@
 }
 
 body {
-  background: #f9f4ed;
-  color: #222;
+  background: #fdf6ed;
+  color: #2e2e2e;
   scroll-behavior: smooth;
 }
 
-/* HEADER */
+/* ===== HEADER ===== */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 70px;
-  background: #fffaf3;
-  position: fixed;
+  padding: 20px 60px;
+  background: #fff6ea;
+  position: sticky;
   top: 0;
-  width: 100%;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 .logo span {
-  color: #d4af37;
+  color: #cda64b;
 }
 
 nav a {
-  margin-left: 25px;
+  margin: 0 15px;
   text-decoration: none;
-  color: #222;
+  color: #333;
   font-weight: 500;
-  transition: 0.3s;
 }
 nav a:hover,
 nav a.active {
-  color: #d4af37;
+  color: #cda64b;
 }
 .contact-btn {
-  background: #8b6529;
-  color: #fff;
-  padding: 6px 16px;
-  border-radius: 30px;
+  background: #8b5e28;
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 20px;
 }
 
-/* HOME SECTION */
+/* ===== HOME ===== */
 .home {
-  min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 120px 80px 60px;
+  align-items: center;
+  padding: 60px 100px;
+  min-height: 90vh;
 }
 
 .home-container {
@@ -67,105 +64,94 @@ nav a.active {
 }
 
 .home-image img {
-  width: 300px;
-  height: 300px;
+  width: 250px;
   border-radius: 50%;
-  border: 6px solid #d4af37;
-  object-fit: cover;
+  border: 5px solid #cda64b;
+}
+
+.home-text {
+  max-width: 600px;
 }
 
 .home-text h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
 }
-.home-text h1 span {
-  color: #d4af37;
+.home-text span {
+  color: #cda64b;
 }
 .home-text h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
 }
-.typing {
-  color: #d4af37;
-  font-weight: bold;
-}
-.home-text p {
-  line-height: 1.7;
-  max-width: 600px;
-  margin-bottom: 25px;
-}
 
-/* SHINY BUTTON */
-.cv-btn {
-  background: linear-gradient(90deg, #8b6529, #d4af37, #8b6529);
-  background-size: 200%;
-  color: #fff;
-  padding: 14px 40px;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: 0.4s;
-  animation: shine 3s linear infinite;
-}
-
-@keyframes shine {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 200%;
-  }
-}
-
-/* SOCIAL ICONS */
 .social-icons {
-  margin-top: 25px;
+  margin: 15px 0;
 }
 .social-icons a {
-  color: #8b6529;
-  font-size: 1.8rem;
-  margin-right: 18px;
+  font-size: 1.5rem;
+  color: #5b3b13;
+  margin-right: 15px;
   transition: 0.3s;
 }
 .social-icons a:hover {
-  color: #d4af37;
+  color: #cda64b;
 }
 
-/* SECTIONS */
+.cv-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #8b5e28;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+.cv-btn:hover {
+  background: #cda64b;
+}
+
+/* ===== SECTIONS ===== */
 section {
-  padding: 100px 70px 50px;
+  padding: 80px 100px;
 }
-section h2 {
-  color: #d4af37;
+h2 {
+  color: #cda64b;
   font-size: 2rem;
-  margin-bottom: 20px;
-}
-section p {
-  margin-bottom: 15px;
-  line-height: 1.7;
+  margin-bottom: 25px;
 }
 
-/* CONTACT INFO */
-.contact-info {
-  margin: 20px 0;
-  font-size: 1.1rem;
+/* Experience */
+.exp-item,
+.job {
+  margin-bottom: 30px;
 }
-.contact-info a {
-  color: #8b6529;
+ul {
+  margin-left: 20px;
+}
+
+/* ===== CONTACT ===== */
+.contact {
+  text-align: center;
+}
+.contact a {
+  color: #8b5e28;
   text-decoration: none;
 }
-.contact-info a:hover {
-  color: #d4af37;
-  text-decoration: underline;
+.contact a:hover {
+  color: #cda64b;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 .footer {
-  position: fixed;
-  bottom: 10px;
-  width: 100%;
   text-align: center;
-  color: #444;
-  font-size: 0.9rem;
+  padding: 20px;
+  background: #f1e4cf;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-weight: 500;
+  color: #5b3b13;
 }
