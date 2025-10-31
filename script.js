@@ -25,7 +25,7 @@ function eraseEffect() {
 }
 typeEffect();
 
-// Navbar active highlight
+// Navbar active link on scroll
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("nav a");
 

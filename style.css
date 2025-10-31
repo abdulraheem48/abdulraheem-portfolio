@@ -9,11 +9,13 @@ body {
   background: #fffaf2;
 }
 
+/* HEADER */
 header {
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
-  background: #fff9f0;
+  background: rgba(255, 249, 240, 0.95);
+  backdrop-filter: blur(8px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +53,7 @@ nav a.active {
   color: #fff !important;
 }
 
+/* SECTIONS */
 section {
   padding: 120px 100px;
 }
@@ -84,6 +87,7 @@ section {
   color: #d4af37;
 }
 
+/* SOCIAL ICONS */
 .social-icons {
   margin: 20px 0;
 }
@@ -101,9 +105,11 @@ section {
 .social-icons a:hover {
   background: #d4af37;
   color: #fff;
-  box-shadow: 0 0 15px #d4af37;
+  box-shadow: 0 0 20px #d4af37;
+  transform: translateY(-3px);
 }
 
+/* CV BUTTON */
 .cv-btn {
   display: inline-block;
   margin-top: 10px;
@@ -119,7 +125,8 @@ section {
 
 .cv-btn:hover {
   background: #c29b2c;
-  box-shadow: 0 0 25px #d4af37;
+  box-shadow: 0 0 25px #d4af37, 0 0 40px #d4af37;
+  transform: translateY(-3px);
 }
 
 h2 {
@@ -137,6 +144,7 @@ ul li::before {
   font-weight: bold;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px 0;
@@ -146,4 +154,5 @@ footer {
   width: 100%;
   font-size: 0.9em;
   color: #555;
+  border-top: 1px solid rgba(0,0,0,0.05);
 }
