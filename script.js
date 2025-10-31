@@ -1,29 +1,37 @@
-const roles = [
-  "Data Engineer",
-  "Cloud Engineer",
-  "Big Data Engineer"
-];
+// Typing effect
+const texts = ["Data Engineer", "Cloud Engineer", "PySpark Developer", "Azure Specialist"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
 
-let typingElement = document.getElementById("typing");
-let roleIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
+function type() {
+  if (count === texts.length) count = 0;
+  currentText = texts[count];
+  letter = currentText.slice(0, ++index);
+  document.querySelector(".typing").textContent = letter;
 
-function typeEffect() {
-  const current = roles[roleIndex];
-  typingElement.textContent = current.substring(0, charIndex);
-
-  if (!isDeleting && charIndex < current.length) {
-    charIndex++;
-    setTimeout(typeEffect, 120);
-  } else if (isDeleting && charIndex > 0) {
-    charIndex--;
-    setTimeout(typeEffect, 60);
+  if (letter.length === currentText.length) {
+    count++;
+    index = 0;
+    setTimeout(type, 1000);
   } else {
-    isDeleting = !isDeleting;
-    if (!isDeleting) roleIndex = (roleIndex + 1) % roles.length;
-    setTimeout(typeEffect, 1000);
+    setTimeout(type, 150);
   }
 }
 
-document.addEventListener("DOMContentLoaded", typeEffect);
+type();
+
+// Fade-in animation
+const faders = document.querySelectorAll(".fade-in");
+const appearOptions = { threshold: 0.2 };
+
+const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach((fader) => appearOnScroll.observe(fader));

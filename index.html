@@ -3,122 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaik Abdul Raheem | Portfolio</title>
+  <title>Shaik Abdul Raheem | Data Engineer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <!-- HEADER -->
   <header>
-    <h2 class="logo">Abdul</h2>
-    <nav>
+    <nav class="navbar">
+      <h2 class="logo"><span>Abdul</span>Raheem</h2>
       <ul class="nav-links">
-        <li><a href="#" class="active" data-section="home">Home</a></li>
-        <li><a href="#" data-section="experience">Experience</a></li>
-        <li><a href="#" data-section="projects">Projects</a></li>
-        <li><a href="#" data-section="certificates">Certificates</a></li>
-        <li><a href="#" data-section="skills">Skills</a></li>
-        <li><a href="#" data-section="education">Education</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
       </ul>
+      <a href="#contact" class="contact-btn">Contact</a>
     </nav>
-    <a href="#contact" class="btn">Contact</a>
   </header>
 
-  <!-- HOME -->
-  <section id="home" class="section active">
-    <div class="home-container">
-      <div class="profile-image">
-        <img src="data/profile.jpg" alt="Shaik Abdul Raheem" />
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <div class="profile-border">
+        <img src="data/profile.jpg" alt="Abdul Raheem" class="profile-img" />
       </div>
-      <div class="intro">
-        <h1>Hey I'm <span class="highlight">Shaik Abdul Raheem</span></h1>
-        <h2>I'm a <span class="typing"></span></h2>
-        <p>Data Engineer | Azure | Databricks | ADF | PySpark | SQL | Power BI | AWS</p>
+    </div>
 
-        <div class="socials">
-          <a href="mailto:abdulraheem687@gmail.com"><i class="fas fa-envelope"></i></a>
-          <a href="https://linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/abdulraheem48" target="_blank"><i class="fab fa-github"></i></a>
-        </div>
-
-        <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" class="download-btn" download>
-          <i class="fas fa-download"></i> Download CV
-        </a>
+    <div class="hero-right">
+      <h1>Hey I'm <span>Abdul Raheem</span></h1>
+      <h2>I'm a <span class="typing"></span></h2>
+      <p>
+        Passionate and detail-oriented Data Engineer with hands-on experience in building and optimizing scalable data pipelines.
+        Skilled in Azure, AWS, Databricks, and Snowflake, delivering end-to-end data solutions for enterprise clients.
+      </p>
+      <div class="socials">
+        <a href="https://github.com/abdulraheem48" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank"><i class="fab fa-linkedin"></i></a>
       </div>
+      <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" download class="cv-btn">Download CV</a>
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience" class="section hidden">
+  <!-- Experience Section -->
+  <section id="experience" class="content-section fade-in">
     <h2>Experience</h2>
 
     <div class="exp-card">
       <h3>Wipro Ltd | Client: Optum (UnitedHealth Group)</h3>
-      <p><strong>Mar 2024 – Present | Data Engineer</strong></p>
+      <p class="period">Mar 2024 – Present | Data Engineer</p>
       <ul>
-        <li>Ensured seamless execution of client processes by proactively identifying and resolving failures.</li>
-        <li>Maintained SLA compliance for response file deliveries, improving reliability and client satisfaction.</li>
+        <li>Ensured seamless execution of client processes by proactively identifying and resolving failures, reducing L2 dependency.</li>
+        <li>Maintained SLA compliance for response file deliveries, improving service reliability and client satisfaction.</li>
         <li>Provided timely assistance to team members and coordinated updates from cross-functional teams.</li>
-        <li>Collaborated effectively during production support ensuring business continuity.</li>
-        <li>Explored product repositories to understand system architecture and data flow.</li>
-        <li>Initiated automation ideas to streamline manual workflows and improve productivity.</li>
+        <li>Collaborated during production support scenarios ensuring business continuity.</li>
+        <li>Explored product repositories to understand architecture and data flow.</li>
+        <li>Initiated automation ideas to streamline manual workflows and improve efficiency.</li>
       </ul>
     </div>
 
     <div class="exp-card">
       <h3>Wipro Ltd | Client: Bharat Petroleum</h3>
-      <p><strong>Jun 2024 – Feb 2025 | Data Engineer</strong></p>
+      <p class="period">Jun 2024 – Feb 2025 | Data Engineer</p>
       <ul>
-        <li>Developed 40+ KPIs using SQL and PySpark to meet client business requirements.</li>
-        <li>Created Databricks job workflows for automated orchestration and timely data refresh.</li>
-        <li>Developed ADF data flows with real-time transformations using Azure Databricks.</li>
-        <li>Integrated SharePoint data into Microsoft Dataverse, maintaining historical data.</li>
-        <li>Built reporting infrastructure using Power BI and SQL delivering real-time insights.</li>
+        <li>Developed 40+ KPIs using SQL and PySpark to meet business requirements.</li>
+        <li>Maintained data refresh workflows in Azure Databricks for daily data pipelines.</li>
+        <li>Built Azure Data Factory pipelines with dynamic parameters for automation.</li>
+        <li>Integrated SharePoint data into Microsoft Dataverse and Power BI dashboards.</li>
+        <li>Collaborated across teams for pipeline optimization and reliability.</li>
       </ul>
     </div>
 
     <div class="exp-card">
       <h3>Wipro Ltd | Client: Apple</h3>
-      <p><strong>Nov 2022 – Apr 2024 | Cloud Engineer</strong></p>
+      <p class="period">Nov 2022 – Apr 2024 | Cloud Engineer</p>
       <ul>
-        <li>Led cloud operations, improving efficiency by 120% through automation.</li>
-        <li>Developed AWS Cloud Data Lakes and managed ETL/ELT pipelines for large-scale data.</li>
-        <li>Automated CI/CD pipelines, resolved AWS access issues, and enhanced monitoring.</li>
-        <li>Built Splunk dashboards for log analysis and mentored new engineers.</li>
+        <li>Led cloud operations, improving data efficiency by 120% through automation.</li>
+        <li>Developed and managed AWS Cloud Data Lakes for large-scale data integration.</li>
+        <li>Automated CI/CD pipelines and resolved AWS access and deployment issues.</li>
+        <li>Built Splunk dashboards for log analysis and operational insights.</li>
       </ul>
     </div>
 
     <div class="exp-card">
       <h3>Wipro Ltd | Client: Apple</h3>
-      <p><strong>Aug 2022 – Oct 2022 | Big Data Engineer</strong></p>
+      <p class="period">Aug 2022 – Oct 2022 | Big Data Engineer</p>
       <ul>
-        <li>Managed nationwide operations optimizing Hadoop cluster performance.</li>
-        <li>Analyzed Spark & Splunk logs to troubleshoot job failures and reduce downtime.</li>
-        <li>Implemented proactive monitoring and streamlined resource allocation.</li>
+        <li>Managed nationwide operations to optimize Hadoop file system usage and cluster performance.</li>
+        <li>Analyzed job failure logs and troubleshot Spark and Splunk logs to minimize downtime.</li>
+        <li>Streamlined cluster operations and patch management for maximum uptime.</li>
       </ul>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section hidden">
+  <!-- Projects Section -->
+  <section id="projects" class="content-section fade-in">
     <h2>Projects</h2>
-    <div class="exp-card">
-      <h3>Vehicle Rental System <span>(Aug 2024)</span></h3>
-      <ul>
-        <li>Developed a full-fledged rental app with customer & staff interfaces.</li>
-        <li>Implemented OOP classes for Vehicle, Customer, and Booking.</li>
-        <li>Added booking management, rental calculation, and invoice generation.</li>
-        <li>Enabled data validation, search filters, and automated reports.</li>
-      </ul>
-    </div>
+    <h3>Vehicle Rental System (Aug 2024)</h3>
+    <ul>
+      <li>Designed and developed a Python-based vehicle rental management application.</li>
+      <li>Implemented OOP-based classes (Vehicle, Customer, Staff, Booking) for structured data management.</li>
+      <li>Created admin and user modules for booking, invoicing, and availability tracking.</li>
+      <li>Added return and penalty calculations, improving automation and user experience.</li>
+    </ul>
   </section>
 
-  <!-- CERTIFICATES -->
-  <section id="certificates" class="section hidden">
-    <h2>Certificates</h2>
-    <ul class="cert-list">
+  <!-- Skills Section -->
+  <section id="skills" class="content-section fade-in">
+    <h2>Skills & Certifications</h2>
+    <p><strong>Languages:</strong> Python, SQL</p>
+    <p><strong>Tools:</strong> Airflow, Hadoop, Snowflake, Pandas, Matplotlib, Apache Spark, Grafana, Jupyter Notebook, ADF, Databricks, Power BI</p>
+    <p><strong>Platforms:</strong> AWS, Azure, GitHub Actions</p>
+    <h3>Certificates</h3>
+    <ul>
       <li>Databricks Certified Associate Developer for Apache Spark 3.0</li>
       <li>AWS Certified Cloud Practitioner</li>
       <li>AWS Certified Solutions Architect – Associate</li>
@@ -126,24 +123,17 @@
     </ul>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="section hidden">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li><li>SQL</li><li>Azure</li><li>Databricks</li>
-      <li>ADF</li><li>Power BI</li><li>Snowflake</li><li>AWS</li>
-      <li>Airflow</li><li>Hadoop</li><li>Apache Spark</li><li>GitHub Actions</li>
-    </ul>
+  <!-- Education Section -->
+  <section id="education" class="content-section fade-in">
+    <h2>Education</h2>
+    <p><strong>B.Tech in Electrical Engineering</strong> — MIC College of Technology (CGPA: 7.62)</p>
+    <p><strong>Diploma - Electrical Engineering</strong> — MIC College of Technology (CGPA: 7.52)</p>
   </section>
 
-  <!-- EDUCATION -->
-  <section id="education" class="section hidden">
-    <h2>Education</h2>
-    <div class="exp-card">
-      <h3>Devineni Venkata Ramana & Dr. Hima Sekhar MIC College of Technology</h3>
-      <p><strong>B.Tech in Electrical Engineering</strong> — CGPA: 7.62 (Vijayawada)</p>
-      <p><strong>Diploma - Electrical Engineering</strong> — CGPA: 7.52 (Vijayawada)</p>
-    </div>
-  </section>
+  <footer>
+    <p>© 2025 Shaik Abdul Raheem. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
