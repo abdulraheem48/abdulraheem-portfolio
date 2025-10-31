@@ -1,42 +1,49 @@
-// Mobile menu toggle
-const mobileBtn = document.getElementById('mobileMenuBtn');
-const nav = document.querySelector('.nav');
-if (mobileBtn) {
-  mobileBtn.addEventListener('click', () => {
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-    nav.style.flexDirection = 'column';
-    nav.style.gap = '10px';
-    nav.style.position = 'absolute';
-    nav.style.right = '24px';
-    nav.style.top = '66px';
-    nav.style.background = 'rgba(255,255,255,0.95)';
-    nav.style.padding = '12px';
-    nav.style.borderRadius = '8px';
-  });
-}
+// 🌟 Portfolio Interactivity – Shaik Abdul Raheem
 
-// Smooth scroll for in-page links
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', function(e) {
+// Smooth scrolling for internal links (e.g., #about, #experience)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      // hide mobile nav after click
-      if (nav && window.innerWidth < 980) nav.style.display = 'none';
+      target.scrollIntoView({ behavior: 'smooth' });
     }
   });
 });
 
-// IntersectionObserver reveal animation
-const revealEls = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-      observer.unobserve(entry.target);
+// Reveal sections with animation when scrolling
+const sections = document.querySelectorAll('section');
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.85;
+  sections.forEach(section => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < triggerBottom) {
+      section.classList.add('visible');
+    } else {
+      section.classList.remove('visible');
     }
   });
-}, { threshold: 0.12 });
+};
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll(); // run once on load
 
-revealEls.forEach(el => observer.observe(el));
+// Create and control floating "Back to Top" button
+const topButton = document.createElement('button');
+topButton.innerText = '↑';
+topButton.className = 'back-to-top';
+document.body.appendChild(topButton);
+
+topButton.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    topButton.classList.add('show');
+  } else {
+    topButton.classList.remove('show');
+  }
+});
+
+// Welcome log in console
+console.log("%cWelcome to Shaik Abdul Raheem’s Portfolio!", "color: goldenrod; font-size: 14px; font-weight: bold;");
