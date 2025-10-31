@@ -1,96 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdul Raheem - Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shaik Abdul Raheem — Data Engineer</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <!-- font awesome for icons (works on GH Pages) -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="slideshow-container">
-    <!-- Slide 1 -->
-    <div class="slide fade active">
-      <div class="content">
-        <h1>SHAIK ABDUL RAHEEM</h1>
-        <p>📧 abdulraheeem687@gmail.com | 📞 +91-6303726373</p>
-        <p>
-          🔗 <a href="https://linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/abdulraheem48" target="_blank">GitHub</a>
-        </p>
-      </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Shaik<span class="dot">.</span></div>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Slide 2 -->
-    <div class="slide fade">
-      <div class="content">
-        <h2>Experience - Data Engineer @ Wipro</h2>
-        <ul>
-          <li>Developed 40+ KPIs from multiple data sources.</li>
-          <li>Created Databricks workflow orchestration for daily refreshes.</li>
-          <li>Developed ADF data flows with dynamic parameters.</li>
-          <li>Integrated SharePoint → Dataverse, built Power BI dashboards.</li>
-        </ul>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="photo-wrap">
+            <!-- Put your profile image at data/profile.png -->
+            <img src="data/profile.png" alt="Shaik Abdul Raheem" class="profile-img" />
+            <div class="photo-decor"></div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <h1 class="hero-title">Hey, I'm <span class="name">Shaik Abdul Raheem</span></h1>
+          <h2 class="hero-sub">I'm a <span class="highlight">Data Engineer</span></h2>
+
+          <p class="hero-desc">
+            Data Engineer at Wipro — expertise in Azure, Databricks, ADF, PySpark and SQL.
+            I build scalable data pipelines, automate workflows and create dashboards for business insights.
+          </p>
+
+          <div class="contact-row">
+            <a href="mailto:abdulraheeem687@gmail.com" class="contact-link"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+916303726373" class="contact-link"><i class="fas fa-phone"></i></a>
+            <a href="https://github.com/abdulraheem48" target="_blank" class="contact-link"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank" class="contact-link"><i class="fab fa-linkedin"></i></a>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn-download" href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" download>
+              <i class="fas fa-download"></i> Download CV
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Slide 3 -->
-    <div class="slide fade">
-      <div class="content">
-        <h2>Experience - Cloud Engineer @ Wipro</h2>
-        <ul>
-          <li>Built AWS data lakes and automated pipelines with CloudFormation.</li>
-          <li>Optimized ETL/ELT jobs, monitored pipelines via Splunk dashboards.</li>
-          <li>Improved data efficiency by 120% through operations automation.</li>
-        </ul>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h3 class="section-title">Experience</h3>
+        <div class="card">
+          <h4>Wipro — Data Engineer</h4>
+          <p class="muted">Jun 2024 – Present</p>
+          <ul>
+            <li>Developed 40+ KPIs by extracting data from multiple sources using SQL and PySpark.</li>
+            <li>Maintained daily refresh using Databricks job workflows and ADF orchestration.</li>
+            <li>Developed ADF data flows and real-time transformations using Azure Databricks & Spark activities.</li>
+            <li>Used dynamic parameters in ADF pipelines (file paths, DB connections).</li>
+            <li>Integrated SharePoint with Microsoft Dataverse and maintained history in Databricks.</li>
+            <li>Built Power BI reports & SQL-based dashboards for product and business KPIs.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Wipro — Cloud Engineer</h4>
+          <p class="muted">Nov 2022 – Apr 2024</p>
+          <ul>
+            <li>Led cloud operations and built AWS data lakes; improved data efficiency by ~120%.</li>
+            <li>Deployed S3, IAM roles, EKS using AWS CLI & CloudFormation; automated CI/CD pipelines.</li>
+            <li>Monitored ETL/ELT pipelines, built Splunk dashboards and improved TMS processes.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h4>Wipro — Big Data Engineer</h4>
+          <p class="muted">Aug 2022 – Oct 2022</p>
+          <ul>
+            <li>Optimized Hadoop cluster storage and analyzed Spark/Splunk logs to reduce job failures.</li>
+            <li>Streamlined disk space management and resolved critical failures quickly.</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Slide 4 -->
-    <div class="slide fade">
-      <div class="content">
-        <h2>Experience - Big Data Engineer @ Wipro</h2>
-        <ul>
-          <li>Optimized Hadoop clusters and Spark logs for better job stability.</li>
-          <li>Reduced job failures by proactive monitoring.</li>
-        </ul>
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h3 class="section-title">Projects</h3>
+        <div class="card">
+          <h4>Vehicle Rental System</h4>
+          <p class="muted">Aug 2024</p>
+          <ul>
+            <li>Built OOP-based system (Vehicle, Customer, Staff, Booking) for rentals and admin.</li>
+            <li>Features: add/update/delete vehicles, booking & invoice generation, penalty calculations.</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Slide 5 -->
-    <div class="slide fade">
-      <div class="content">
-        <h2>Projects</h2>
-        <p><b>Vehicle Rental System</b> — built with OOP concepts, supports vehicle bookings and invoices.</p>
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="section">
+      <div class="container">
+        <h3 class="section-title">Certificates</h3>
+        <div class="card">
+          <ul>
+            <li>Databricks Certified Associate Developer for Apache Spark 3.0</li>
+            <li>AWS Certified Cloud Practitioner</li>
+            <li>AWS Certified Solutions Architect – Associate</li>
+            <li>SnowPro Core</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Slide 6 -->
-    <div class="slide fade">
-      <div class="content">
-        <h2>Certificates & Skills</h2>
-        <ul>
-          <li>Databricks Certified | AWS Architect | SnowPro Core</li>
-          <li>Languages: Python, SQL</li>
-          <li>Tools: Airflow, Databricks, Power BI, Snowflake</li>
-          <li>Platforms: Azure, AWS, GitHub Actions</li>
-        </ul>
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <h3 class="section-title">Skills</h3>
+        <div class="two-col">
+          <ul>
+            <li><strong>Languages:</strong> Python, SQL</li>
+            <li><strong>Tools:</strong> Airflow, Hadoop, Snowflake, Pandas, Matplotlib, Spark, Grafana, Databricks</li>
+          </ul>
+          <ul>
+            <li><strong>Data & ETL:</strong> Azure Data Factory, ADF, Databricks</li>
+            <li><strong>Platforms:</strong> AWS, Azure, GitHub Actions</li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Slide 7 -->
-    <div class="slide fade">
-      <div class="content">
-        <h2>Education</h2>
-        <p><b>B.Tech</b> - Electrical Engineering (CGPA 7.62)</p>
-        <p><b>Diploma</b> - Electrical Engineering (CGPA 7.52)</p>
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="container">
+        <h3 class="section-title">Education</h3>
+        <div class="card">
+          <p><strong>B.Tech — Electrical Engineering</strong><br/>Devineni Venkata Ramana & Dr. Hima Sekhar MIC College of Technology — CGPA: 7.62</p>
+          <p><strong>Diploma — Electrical Engineering</strong><br/>Devineni Venkata Ramana & Dr. Hima Sekhar MIC College of Technology — CGPA: 7.52</p>
+        </div>
       </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h3 class="section-title">Contact</h3>
+        <div class="card">
+          <p>Email: <a href="mailto:abdulraheeem687@gmail.com">abdulraheeem687@gmail.com</a></p>
+          <p>Phone: <a href="tel:+916303726373">+91-6303726373</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank">shaik-abdul-raheem-950256176</a></p>
+          <p>GitHub: <a href="https://github.com/abdulraheem48" target="_blank">abdulraheem48</a></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Shaik Abdul Raheem • Built with HTML/CSS/JS</p>
     </div>
-
-    <!-- Buttons -->
-    <div class="nav-btn prev" onclick="changeSlide(-1)">❮</div>
-    <div class="nav-btn next" onclick="changeSlide(1)">❯</div>
-  </div>
-
-  <script src="script.js"></script>
+  </footer>
 </body>
 </html>
