@@ -3,118 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shaik Abdul Raheem | Data Engineer Portfolio</title>
+  <title>Shaik Abdul Raheem | Data Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <img src="data/profile.jpg" alt="Profile Picture" class="profile-pic" />
-    <h1>Shaik Abdul Raheem</h1>
-    <p>Data Engineer | Azure | Databricks | ADF | PySpark | SQL</p>
-    <p>
-      📧 <a href="mailto:abdulraheeem687@gmail.com">abdulraheeem687@gmail.com</a> |
-      📱 +91-6303726373 |
-      🌐 <a href="https://www.linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank">LinkedIn</a> |
-      💻 <a href="https://github.com/abdulraheem48" target="_blank">GitHub</a>
-    </p>
-    <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" class="resume-btn" download>📄 Download Resume</a>
+    <nav class="navbar">
+      <div class="logo">Raheem</div>
+      <ul class="nav-links">
+        <li><a href="#" data-section="home" class="active">Home</a></li>
+        <li><a href="#" data-section="about">About</a></li>
+        <li><a href="#" data-section="experience">Experience</a></li>
+        <li><a href="#" data-section="contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm <strong>Shaik Abdul Raheem</strong>, a passionate <strong>Data Engineer</strong> with expertise in 
-      <strong>Azure, Databricks, ADF, SQL, and PySpark</strong>.  
-      I build and optimize scalable data pipelines, helping enterprises like 
-      <strong>Optum, Bharat Petroleum, and Apple</strong> drive data-based decisions.
-    </p>
-    <p>
-      I’m driven by transforming raw data into valuable insights and automating workflows 
-      to improve efficiency. My focus is on end-to-end solutions that combine performance, 
-      innovation, and business impact.
-    </p>
-    <p><strong>Goal:</strong> To grow into a <strong>Data Solutions Architect</strong> and create powerful, 
-      scalable data ecosystems for global clients.</p>
-  </section>
+  <!-- Sections -->
+  <main>
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <div class="home-container">
+        <div class="profile-img">
+          <img src="data/profile.jpg" alt="Shaik Abdul Raheem">
+        </div>
+        <div class="intro">
+          <h1>Hey, I'm <span>Shaik Abdul Raheem</span></h1>
+          <h2>I'm a <span class="highlight">Data Engineer</span></h2>
+          <p>
+            Data Engineer at Wipro — expertise in Azure, Databricks, ADF, PySpark and SQL.  
+            I build scalable data pipelines, automate workflows, and create dashboards for business insights.
+          </p>
+          <div class="buttons">
+            <a href="Abdul_Raheem_Wipro_Data_Engineer.pdf" class="btn" download>Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-
-    <div class="experience">
-      <h3>Wipro Ltd | Client: Optum (UnitedHealth Group)</h3>
-      <span>Mar 2024 – Present | Data Engineer</span>
-      <ul>
-        <li>Ensured seamless execution of client processes by proactively identifying and resolving failures.</li>
-        <li>Maintained SLA compliance for response file deliveries improving client satisfaction.</li>
-        <li>Collaborated with peers during production issues ensuring business continuity.</li>
-        <li>Explored repositories to understand system data flow improving support capabilities.</li>
-        <li>Initiated automation ideas reducing manual effort and increasing productivity.</li>
-      </ul>
-    </div>
-
-    <div class="experience">
-      <h3>Wipro Ltd | Client: Bharat Petroleum</h3>
-      <span>Jun 2024 – Feb 2025 | Data Engineer</span>
-      <ul>
-        <li>Developed 40+ KPIs by extracting data from multiple sources meeting business needs.</li>
-        <li>Built automated Databricks workflows for daily data refresh and real-time insights.</li>
-        <li>Created ADF data flows integrating data from SharePoint to Microsoft Dataverse.</li>
-        <li>Built Power BI dashboards providing real-time KPI visualizations.</li>
-      </ul>
-    </div>
-
-    <div class="experience">
-      <h3>Wipro Ltd | Client: Apple</h3>
-      <span>Nov 2022 – Apr 2024 | Cloud Engineer</span>
-      <ul>
-        <li>Led cloud operations improving data management efficiency by 120% through automation.</li>
-        <li>Developed AWS Data Lakes improving accessibility and integration.</li>
-        <li>Built Splunk dashboards to analyze system logs improving monitoring efficiency.</li>
-      </ul>
-    </div>
-
-    <div class="experience">
-      <h3>Wipro Ltd | Client: Apple</h3>
-      <span>Aug 2022 – Oct 2022 | Big Data Engineer</span>
-      <ul>
-        <li>Managed Hadoop clusters optimizing system resources and uptime.</li>
-        <li>Diagnosed Spark job failures and streamlined disk space management.</li>
-        <li>Enhanced system reliability with proactive monitoring and issue resolution.</li>
-      </ul>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>🚗 Vehicle Rental System</h3>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About Me</h2>
       <p>
-        Developed an OOP-based vehicle rental application with modules for customers and staff, 
-        including vehicle management, booking, and invoice generation.
+        I'm <strong>Shaik Abdul Raheem</strong>, a passionate Data Engineer with experience in designing scalable data solutions 
+        and optimizing workflows in cloud platforms like Azure and AWS.  
+        I enjoy transforming raw data into actionable insights that drive business performance and strategy.  
+        Outside of work, I’m constantly learning about data automation, system optimization, and AI tools.
       </p>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Python</li>
-      <li>SQL</li>
-      <li>Azure Data Factory</li>
-      <li>Databricks</li>
-      <li>Power BI</li>
-      <li>Apache Spark</li>
-      <li>AWS</li>
-      <li>Snowflake</li>
-      <li>Airflow</li>
-      <li>Hadoop</li>
-    </ul>
-  </section>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      
+      <div class="exp-card">
+        <h3>Wipro Ltd | Client: Optum (UnitedHealth Group)</h3>
+        <span class="date">Mar 2024 – Present</span>
+        <p class="role">Data Engineer</p>
+        <ul>
+          <li><strong>Ensured seamless execution</strong> of client processes, reducing L2 dependency and improving efficiency.</li>
+          <li><strong>Maintained SLA compliance</strong> for critical data pipelines and response file deliveries.</li>
+          <li><strong>Collaborated</strong> during production issues to ensure continuity and timely resolution.</li>
+          <li><strong>Initiated automation ideas</strong> to optimize manual processes and boost productivity.</li>
+        </ul>
+      </div>
 
-  <footer>
-    &copy; 2025 Shaik Abdul Raheem |
-    <a href="https://github.com/abdulraheem48/abdulraheem-portfolio" target="_blank">GitHub Repository</a>
-  </footer>
+      <div class="exp-card">
+        <h3>Wipro Ltd | Client: Bharat Petroleum</h3>
+        <span class="date">Jun 2023 – Feb 2024</span>
+        <p class="role">Data Engineer</p>
+        <ul>
+          <li>Developed <strong>40+ KPIs</strong> by transforming multi-source data for business analytics.</li>
+          <li>Created <strong>Databricks pipelines</strong> and <strong>ADF dataflows</strong> for real-time insights.</li>
+          <li>Integrated <strong>SharePoint to Microsoft Dataverse</strong> for smooth data management.</li>
+          <li>Built <strong>Power BI dashboards</strong> for reporting and performance monitoring.</li>
+        </ul>
+      </div>
+
+      <div class="exp-card">
+        <h3>Wipro Ltd | Client: Apple</h3>
+        <span class="date">Nov 2022 – Apr 2023</span>
+        <p class="role">Cloud Engineer</p>
+        <ul>
+          <li>Implemented <strong>AWS Cloud Data Lakes</strong> to enhance scalability and data access.</li>
+          <li>Automated <strong>CI/CD pipelines</strong> and optimized <strong>ETL processes</strong>.</li>
+          <li>Built <strong>Splunk dashboards</strong> for operational visibility and performance tracking.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong> abdulraheeem687@gmail.com<br>
+        <strong>Phone:</strong> +91-6303726373<br>
+        <strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/shaik-abdul-raheem-950256176" target="_blank">View Profile</a><br>
+        <strong>GitHub:</strong> 
+        <a href="https://github.com/abdulraheem48" target="_blank">abdulraheem48</a>
+      </p>
+    </section>
+  </main>
 </body>
 </html>
