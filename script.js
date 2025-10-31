@@ -1,19 +1,39 @@
-const buttons = document.querySelectorAll(".nav-btn");
-const sections = document.querySelectorAll(".section");
+const tabs = document.querySelectorAll('nav a');
+const contents = document.querySelectorAll('.tab-content');
 
-buttons.forEach(button => {
-  button.addEventListener("click", () => {
-    buttons.forEach(b => b.classList.remove("active"));
-    button.classList.add("active");
+tabs.forEach(tab => {
+  tab.addEventListener('click', e => {
+    e.preventDefault();
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
 
-    const target = button.getAttribute("data-section");
-
-    sections.forEach(section => {
-      if (section.id === target) {
-        section.classList.add("active");
-      } else {
-        section.classList.remove("active");
-      }
+    const target = tab.dataset.tab;
+    contents.forEach(c => {
+      if (c.id === target) c.classList.add('active');
+      else c.classList.remove('active');
     });
   });
 });
+
+// Typing effect
+const words = ["Data Engineer", "Cloud Engineer", "Big Data Developer"];
+let i = 0, j = 0, currentWord = "", isDeleting = false;
+const typingElement = document.querySelector(".typing");
+
+function type() {
+  currentWord = words[i];
+  typingElement.textContent = currentWord.substring(0, j);
+
+  if (!isDeleting && j < currentWord.length) {
+    j++;
+    setTimeout(type, 100);
+  } else if (isDeleting && j > 0) {
+    j--;
+    setTimeout(type, 60);
+  } else {
+    isDeleting = !isDeleting;
+    if (!isDeleting) i = (i + 1) % words.length;
+    setTimeout(type, 1200);
+  }
+}
+type();

@@ -7,116 +7,97 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="logo">SHAIK ABDUL RAHEEM</div>
-    <nav class="nav">
-      <button class="nav-btn active" data-section="home">Home</button>
-      <button class="nav-btn" data-section="experience">Experience</button>
-      <button class="nav-btn" data-section="projects">Projects</button>
-      <button class="nav-btn" data-section="certificates">Certificates</button>
-      <button class="nav-btn" data-section="skills">Skills</button>
-      <button class="nav-btn" data-section="education">Education</button>
+  <header>
+    <div class="logo"><span>Abdul</span>Raheem</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active" data-tab="home">Home</a></li>
+        <li><a href="#" data-tab="experience">Experience</a></li>
+        <li><a href="#" data-tab="projects">Projects</a></li>
+        <li><a href="#" data-tab="skills">Skills</a></li>
+        <li><a href="#" data-tab="education">Education</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <!-- HOME -->
-    <section id="home" class="section active">
-      <div class="content">
-        <img src="data/profile.jpg" alt="Profile" class="profile-pic">
-        <h1>Hi, I'm <span class="highlight">Shaik Abdul Raheem</span></h1>
-        <p>Data Engineer | Cloud Specialist | Azure & AWS | Power BI</p>
-        <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" class="btn" download>Download Resume</a>
+    <section id="home" class="tab-content active">
+      <div class="intro">
+        <img src="data/profile.jpg" alt="Profile" class="profile-img">
+        <div class="intro-text">
+          <h1>Hey I'm <span>Abdul Raheem</span></h1>
+          <h2>I'm a <span class="typing"></span></h2>
+          <p>
+            Passionate and detail-oriented Data Engineer experienced in Azure, AWS, Databricks, and Snowflake.
+            Skilled in building and optimizing scalable pipelines for enterprise clients.
+          </p>
+          <a href="data/Abdul_Raheem_Wipro_Data_Engineer.pdf" class="btn" download>Download CV</a>
+        </div>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <div class="content">
-        <h2>Experience</h2>
-
-        <div class="exp-card">
-          <h3>Wipro Ltd | Client: Optum (UnitedHealth Group)</h3>
-          <p class="date">Mar 2024 – Present | Data Engineer</p>
-          <ul>
-            <li>Ensured seamless execution of client processes by identifying and resolving failures, reducing L2 dependency.</li>
-            <li>Maintained SLA compliance, enhancing reliability and client satisfaction.</li>
-            <li>Coordinated updates across teams and ensured business continuity.</li>
-            <li>Introduced automation ideas to streamline workflows.</li>
-          </ul>
-        </div>
-
-        <div class="exp-card">
-          <h3>Wipro Ltd | Client: Bharat Petroleum</h3>
-          <p class="date">Jun 2024 – Feb 2025 | Data Engineer</p>
-          <ul>
-            <li>Developed 40+ KPIs using SQL & PySpark to meet business needs.</li>
-            <li>Maintained data pipelines in Azure Databricks and ADF.</li>
-            <li>Integrated SharePoint data into Dataverse and Power BI.</li>
-          </ul>
-        </div>
-
-        <div class="exp-card">
-          <h3>Wipro Ltd | Client: Apple</h3>
-          <p class="date">Nov 2022 – Apr 2024 | Cloud Engineer</p>
-          <ul>
-            <li>Led AWS Cloud operations improving data efficiency by 120%.</li>
-            <li>Built and managed AWS Data Lakes, S3, IAM, and EKS clusters.</li>
-            <li>Developed CI/CD pipelines and Splunk dashboards.</li>
-          </ul>
-        </div>
+    <section id="experience" class="tab-content">
+      <h2>Experience</h2>
+      <div class="exp">
+        <h3>Wipro Ltd | Client: Optum (UnitedHealth Group)</h3>
+        <p><strong>Mar 2024 – Present</strong> | Data Engineer</p>
+        <ul>
+          <li>Ensured seamless execution by identifying and resolving failures, reducing L2 dependency.</li>
+          <li>Maintained SLA compliance for file deliveries, improving service reliability.</li>
+          <li>Collaborated during production support ensuring business continuity.</li>
+        </ul>
+        <h3>Wipro Ltd | Client: Bharat Petroleum</h3>
+        <p><strong>Jun 2024 – Feb 2025</strong> | Data Engineer</p>
+        <ul>
+          <li>Developed 40+ KPIs using SQL & PySpark meeting business requirements.</li>
+          <li>Built ADF pipelines with dynamic parameters and automated workflows.</li>
+          <li>Integrated SharePoint data into Dataverse and Power BI dashboards.</li>
+        </ul>
+        <h3>Wipro Ltd | Client: Apple</h3>
+        <p><strong>Nov 2022 – Apr 2024</strong> | Cloud Engineer</p>
+        <ul>
+          <li>Led cloud operations improving efficiency by 120% through automation.</li>
+          <li>Developed AWS Data Lakes and CI/CD pipelines for reliable deployments.</li>
+          <li>Created Splunk dashboards for monitoring and analytics.</li>
+        </ul>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="content">
-        <h2>Projects</h2>
-        <div class="exp-card">
-          <h3>Vehicle Rental System (Aug 2024)</h3>
-          <ul>
-            <li>Developed full-featured vehicle rental system using Python OOPs.</li>
-            <li>Created modules for booking, billing, and admin dashboards.</li>
-            <li>Automated invoice generation and ensured data validation.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTIFICATES -->
-    <section id="certificates" class="section">
-      <div class="content">
-        <h2>Certificates</h2>
-        <ul>
-          <li>Databricks Certified Associate Developer for Apache Spark 3.0</li>
-          <li>AWS Certified Cloud Practitioner</li>
-          <li>AWS Certified Solutions Architect - Associate</li>
-          <li>SnowPro Core</li>
-        </ul>
-      </div>
+    <section id="projects" class="tab-content">
+      <h2>Projects</h2>
+      <h3>Vehicle Rental System (Aug 2024)</h3>
+      <ul>
+        <li>Developed full system for vehicle rental with OOP-based modules.</li>
+        <li>Implemented booking, vehicle management, and admin reporting features.</li>
+        <li>Automated invoice generation with error handling and validation.</li>
+      </ul>
     </section>
 
     <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="content">
-        <h2>Skills</h2>
-        <ul>
-          <li><strong>Languages:</strong> Python, SQL</li>
-          <li><strong>Tools:</strong> Airflow, Hadoop, Snowflake, Spark, Power BI, ADF, Databricks</li>
-          <li><strong>Platforms:</strong> AWS, Azure, GitHub Actions</li>
-        </ul>
-      </div>
+    <section id="skills" class="tab-content">
+      <h2>Skills & Certifications</h2>
+      <p><strong>Languages:</strong> Python, SQL</p>
+      <p><strong>Tools:</strong> Airflow, Hadoop, Snowflake, Pandas, Matplotlib, Spark, Grafana, Jupyter, ADF, Databricks, Power BI</p>
+      <p><strong>Platforms:</strong> AWS, Azure, GitHub Actions</p>
+      <h3>Certificates</h3>
+      <ul>
+        <li>Databricks Certified Associate Developer for Apache Spark 3.0</li>
+        <li>AWS Certified Cloud Practitioner</li>
+        <li>AWS Certified Solutions Architect – Associate</li>
+        <li>SnowPro Core</li>
+      </ul>
     </section>
 
     <!-- EDUCATION -->
-    <section id="education" class="section">
-      <div class="content">
-        <h2>Education</h2>
-        <ul>
-          <li><strong>B.Tech (Electrical Engineering):</strong> MIC College of Technology — CGPA 7.62</li>
-          <li><strong>Diploma (Electrical Engineering):</strong> MIC College of Technology — CGPA 7.52</li>
-        </ul>
-      </div>
+    <section id="education" class="tab-content">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech in Electrical Engineering</strong> – MIC College of Technology (CGPA: 7.62)</li>
+        <li><strong>Diploma - Electrical Engineering</strong> – MIC College of Technology (CGPA: 7.52)</li>
+      </ul>
     </section>
   </main>
 
